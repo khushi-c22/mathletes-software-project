@@ -2,7 +2,7 @@
 
 # Overview
 
-_____ is a productivity system designed to help users stay on task by analyzing eye movement and attention patterns during work sessions. By leveraging computer vision and real-time tracking, the system detects whether a user is actively engaged with their screen and provides detailed session reports to improve focus and productivity over time. 
+Our project is a productivity system designed to help users stay on task by analyzing eye movement and attention patterns during work sessions. By leveraging computer vision and real-time tracking, the system detects whether a user is actively engaged with their screen and provides detailed session reports to improve focus and productivity over time. 
 
 # Key Features
 1. Real-Time Eye Tracking
