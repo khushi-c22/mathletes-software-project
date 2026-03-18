@@ -28,7 +28,7 @@ Our project is a productivity system designed to help users stay on task by anal
 
 # Tech Stack
 - Frontend: React
-- Backend: Python, R Studio
+- Backend: Python (mediapipe, opencv, numpy), R Studio
 - Computer Vision:
 - Database: Supabase
 - Visualization: R Studio
