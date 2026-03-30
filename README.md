@@ -29,7 +29,7 @@ Our project is a productivity system designed to help users stay on task by anal
 # Tech Stack
 - Frontend: React
 - Backend: Python (mediapipe, opencv, numpy), R Studio
-- Computer Vision:
+- Computer Vision: MediaPipe (Face Mesh), OpenCV
 - Database: Supabase
 - Visualization: R Studio
 
@@ -41,3 +41,103 @@ We prioritize user privacy and transparency:
   - No video footage is stored unless explicitly enabled
 
 # Installation
+
+## ⚠️ Important: Python Version Requirement
+
+This project requires **Python 3.11 specifically**. Python 3.12 and 3.13 are **not compatible** with MediaPipe and will cause errors.
+
+## Dependencies
+- `opencv-python` — webcam capture and image processing
+- `mediapipe` — face mesh and landmark detection
+
+---
+
+## Windows
+
+1. **Install Python 3.11**
+   Download and run the installer:
+   https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
+
+   ✅ Check **"Add Python 3.11 to PATH"** on the first screen.
+
+2. **Clone the repository**
+   ```
+   git clone https://github.com/khushi-c22/mathletes-software-project.git
+   cd mathletes-software-project
+   ```
+
+3. **Create and activate a virtual environment**
+   ```
+   py -3.11 -m venv venv311
+   venv311\Scripts\activate
+   ```
+   > If you get a scripts/permissions error, run this first, then try again:
+   > ```
+   > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   > ```
+
+4. **Install dependencies**
+   ```
+   pip install -r requirements.txt
+   ```
+
+5. **Run the eye tracker**
+   ```
+   python eye_tracking.py
+   ```
+   A window will open showing your webcam feed with green face landmark dots.
+   Press **Q** to quit.
+
+6. **Run tests**
+   ```
+   python -m pytest test_eye_tracking.py -v
+   ```
+   > Make sure your face is visible to the webcam when running tests.
+
+---
+
+## Mac
+
+1. **Install Python 3.11**
+
+   Option A — Download the installer directly:
+   https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg
+
+   Option B — Use Homebrew (recommended if you have it):
+   ```
+   brew install python@3.11
+   ```
+
+2. **Clone the repository**
+   ```
+   git clone https://github.com/khushi-c22/mathletes-software-project.git
+   cd mathletes-software-project
+   ```
+
+3. **Create and activate a virtual environment**
+   ```
+   python3.11 -m venv venv311
+   source venv311/bin/activate
+   ```
+
+4. **Install dependencies**
+   ```
+   pip install -r requirements.txt
+   ```
+
+5. **Run the eye tracker**
+   ```
+   python eye_tracking.py
+   ```
+   A window will open showing your webcam feed with green face landmark dots.
+   Press **Q** to quit.
+
+   > **Mac camera permissions:** If the webcam doesn't open, go to **System Settings → Privacy & Security → Camera** and make sure Terminal (or VS Code) has camera access enabled.
+
+6. **Run tests**
+   ```
+   python -m pytest test_eye_tracking.py -v
+   ```
+   > Make sure your face is visible to the webcam when running tests.
+
+---
