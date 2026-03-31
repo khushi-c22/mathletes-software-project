@@ -10,12 +10,12 @@ function App() {
       </header>
 
       <main>
-        {/* Your webcam feed or canvas will go here */}
+        {/*feed or canvas will go here */}
         <div className="tracker-view">
           <p>Camera feed / tracking canvas</p>
         </div>
 
-        {/* Stats or controls */}
+        {/* Stats / controls  */}
         <div className="controls">
           <button>Start Tracking</button>
           <button>Stop</button>
