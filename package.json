@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "eyetracker",
   "private": true,
   "version": "0.0.0",
@@ -29,5 +30,9 @@
     "on": "^1.3.0",
     "vite": "^8.0.0",
     "wait": "^0.4.2"
+=======
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1"
+>>>>>>> origin/main
   }
 }
