@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "eyetracker",
   "private": true,
   "version": "0.0.0",
@@ -11,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.101.1",
     "lucide-react": "^1.8.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -30,9 +30,5 @@
     "on": "^1.3.0",
     "vite": "^8.0.0",
     "wait": "^0.4.2"
-=======
-  "dependencies": {
-    "@supabase/supabase-js": "^2.101.1"
->>>>>>> origin/main
   }
 }
