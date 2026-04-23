@@ -19,8 +19,8 @@ export default function App() {
       <div className="app">
         <header className="app-header">
           <div className="app-logo">
-            <Eye size={22} strokeWidth={1.5} />
-            <span>FocusLens</span>
+            <Eye size={24} strokeWidth={1.5} />
+            <span>ici!</span>
           </div>
           <nav className="app-nav">
             {tabs.map(t => (
