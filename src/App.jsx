@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { SessionProvider } from "./context/SessionContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import Tracker from "./components/Tracker";
 import SessionReport from "./components/SessionReport";
 import Dashboard from "./components/Dashboard";
-import { Eye, BarChart2, LayoutDashboard } from "lucide-react";
+import Login from "./components/Login";
+import { Eye, BarChart2, LayoutDashboard, LogOut } from "lucide-react";
 import "./App.css";
 
 const tabs = [
@@ -12,8 +14,22 @@ const tabs = [
   { id: "history", label: "History", icon: LayoutDashboard },
 ];
 
-export default function App() {
+function AppContent() {
   const [tab, setTab] = useState("tracker");
+  const { user, signOut, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="app" style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
+        <div style={{ color: "var(--muted)" }}>Loading...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Login />;
+  }
+
   return (
     <SessionProvider>
       <div className="app">
@@ -29,6 +45,9 @@ export default function App() {
                 {t.label}
               </button>
             ))}
+            <button className="nav-tab" onClick={signOut} title="Sign out">
+              <LogOut size={16} />
+            </button>
           </nav>
         </header>
         <main className="app-main">
@@ -38,5 +57,13 @@ export default function App() {
         </main>
       </div>
     </SessionProvider>
+  );
+}
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
