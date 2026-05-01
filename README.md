@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -157,6 +156,3 @@ This project requires **Python 3.11 specifically**. Python 3.12 and 3.13 are **n
    python -m pytest test_eye_tracking.py -v
    ```
    > Make sure your face is visible to the webcam when running tests.
-
----
->>>>>>> origin/main
